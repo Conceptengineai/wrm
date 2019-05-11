@@ -1,0 +1,59 @@
+$color-main: #b359dd;
+$color-text-main: #d099ea;
+
+$loginFormSpaceLR: 25px;
+$loginFormInputH: 34px;
+$loginFormInputW: 250px;
+
+.login_form {
+    display: grid;
+    
+    background-color: #fff;
+    
+    form {
+        margin-top: 15px;
+        
+        display: grid;
+        grid-gap: 15px;
+    }
+}
+
+.login_form--header {
+    color: $color-main;
+    font-size: 1.5rem;
+    
+    margin: 10px $loginFormSpaceLR;
+    padding-bottom: 10px;
+    
+    border-bottom: 2px solid $color-main;
+}
+
+.login_form--group {
+    margin: 10px $loginFormSpaceLR;
+    
+    input {
+        height: $loginFormInputH;
+        width: $loginFormInputW;
+        border: 1px solid #e2e2e2;
+        padding: 5px;
+        
+        font-size: 1.15rem;
+    }
+}
+
+.login_form--button {
+    button {
+        border: 0;
+        background: #e2e2e2;
+        // background: $color-text-main
+        border-bottom: 5px solid $color-main;
+        
+        width: 100%;
+        height: 60px;
+        
+        text-transform: uppercase;
+        color: $color-main;
+        font-weight: 700;
+        font-size: 1.15rem;
+    }
+}

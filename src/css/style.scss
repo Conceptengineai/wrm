@@ -1,0 +1,26 @@
+$color-main: #b359dd;
+$color-text-main: #d099ea;
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: $color-main;
+    background-color: $color-text-main;
+    color: $color-main;
+}
+
+nav {
+    display: grid;
+    
+}
+
+#wrm {
+    height: 100vh;
+    width: 100vw;
+    
+    display: grid;
+    place-content: center;
+}
