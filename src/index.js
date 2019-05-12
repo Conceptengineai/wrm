@@ -11,10 +11,6 @@ import { PrivateRoute } from './components/PrivateRoute';
 import { HomePage } from './HomePage';
 import { LoginPage } from './LoginPage';
 
-// setup fake backend
-import { configureFakeBackend } from './helpers/fake-backend';
-configureFakeBackend();
-
 class App extends React.Component {
     render() {
         return (

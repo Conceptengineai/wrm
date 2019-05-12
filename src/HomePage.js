@@ -20,7 +20,7 @@ class HomePage extends React.Component {
             user: JSON.parse(localStorage.getItem('user')),
             users: { loading: true }
         });
-        userService.getAll().then(users => this.setState({ users }));
+        userService.getAll().then(users => this.setState({ users: users.users }));
     }
 
     render() {
@@ -28,6 +28,7 @@ class HomePage extends React.Component {
         return (
             <div className="col-md-6 col-md-offset-3">
                 <AppRouter />
+                <Link to="/login">Logout</Link>
                 <h1>Hi {user.firstName}!</h1>
                 <p>You're logged in with React & Basic HTTP Authentication!!</p>
                 <h3>Users from secure api end point:</h3>
@@ -41,9 +42,6 @@ class HomePage extends React.Component {
                         )}
                     </ul>
                 }
-                <p>
-                    <Link to="/login">Logout</Link>
-                </p>
             </div>
         );
     }

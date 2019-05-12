@@ -21,6 +21,7 @@ function AppRouter() {
             <Link to="/">Index</Link>
             <Link to="/about/">About</Link>
             <Link to="/users/">Users</Link>
+            <Link to="/login">Logout</Link>
         </nav>
 
         <Route path="/" exact component={Index} />
