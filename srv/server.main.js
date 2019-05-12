@@ -7,6 +7,7 @@ connect().use(serveStatic(__dirname)).listen(8080, function(){
 var express = require('express');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var path = require('path');
 
 var app = express();
 
@@ -35,7 +36,10 @@ app.use(function (req, res, next) {
 
 require('./server.routes')(app);
 
-app.get('/', function(req, res) {});
+app.use(express.static(path.join(__dirname, '/../')));
+app.get('*', (req, res) => {    
+    res.sendFile('index.html', { root: path.resolve(__dirname, '../dist') });
+});
 
 app.listen(8081);
 console.log('Listening on port 8081');
