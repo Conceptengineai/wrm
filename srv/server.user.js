@@ -14,7 +14,7 @@ exports.authenticate = function(request, response) {
     
     let user = authenticate(username, password);
     
-    if(user.legth === 0) {
+    if(user.length === 0) {
         response.send([{
             ok: false
         }]);
